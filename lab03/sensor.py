@@ -23,4 +23,3 @@ print(f'Количество error: {cheter}')
 print(f'Количество превышений:{chethg}')
 print(f'Максимальное значение:{max1:.1f}')
 print(f'Среднее показание:{crz:.1f}')
-#fhjed\5
