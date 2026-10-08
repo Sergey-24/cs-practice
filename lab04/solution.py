@@ -14,7 +14,7 @@ def ranking(names: list[str], scores: list[float]) -> list[str]:
     a = []
     newlist1 = sorted(range(len(scores)), key=lambda index:scores[index], reverse=True)
     for i in newlist1:
-        a.append(i)
+        a.append(names[i])
     return a
 
 
