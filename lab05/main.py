@@ -1,5 +1,4 @@
 from tablestats import *
-
 def main():
     name = input()
     with open(name, encoding="utf-8") as file:
