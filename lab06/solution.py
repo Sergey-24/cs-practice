@@ -10,8 +10,8 @@ def unique_sorted(values: list) -> list:
 
 def common(first: list, second: list) -> list:
     result = set(first) & set(second)
-    return sorted(common)
+    return sorted(result)
 
 def only_in_first(first: list, second: list) -> list:
-    only_in_first = set(first) - set(second)
-    return sorted(only_in_first)
+    result = set(first) - set(second)
+    return sorted(result)
