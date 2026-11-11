@@ -45,3 +45,65 @@ print("Первые две строки без первого столбца:")
 print(temperatures[:2, 1:])
 print("Центральный фрагмент:")
 print(temperatures[:2, 1:3])
+
+# Задание 4
+matrix = np.arange(1, 26).reshape(5, 5)
+
+print("\nЗадание 4")
+print("Исходная матрица:\n", matrix)
+
+part = matrix[:3, :]
+print("Первые три строки:\n", part)
+print("Форма:", part.shape)
+
+part = matrix[-2:, :]
+print("Последние две строки:\n", part)
+print("Форма:", part.shape)
+
+part = matrix[:, :2]
+print("Первые два столбца:\n", part)
+print("Форма:", part.shape)
+
+part = matrix[1:4, 2:5]
+print("Строки 1-3, столбцы 2-4:\n", part)
+print("Форма:", part.shape)
+
+part = matrix[-2:, -2:]
+print("Правый нижний угол:\n", part)
+print("Форма:", part.shape)
+
+# Задание 5
+changed_hours = hours.copy()
+
+changed_hours[2:5] = 99
+changed_hours[1::2] = -1
+
+print("\nЗадание 5")
+print("Изменённый hours:", changed_hours)
+print("Исходный hours:", hours)
+
+changed_matrix = matrix.copy()
+
+changed_matrix[1, :] = 0
+changed_matrix[:, -1] = -1
+changed_matrix[1:4, 1:4] = 100
+
+print("Изменённая матрица:\n", changed_matrix)
+print("Исходная матрица:\n", matrix)
+
+# copy() создаёт независимую копию массива.
+# Поэтому изменения не затрагивают исходный массив.
+
+# Задание 6
+numbers = np.arange(12)
+table = numbers.reshape(3, 4)
+transposed = table.T
+
+print("\nЗадание 6")
+print("Форма numbers:", numbers.shape)
+print("Форма table:", table.shape)
+print("Форма transposed:", transposed.shape)
+
+# reshape(3, 4) работает, потому что 3 * 4 = 12.
+# reshape(5, 3) вызовет ошибку, так как 5 * 3 = 15,
+# а в исходном массиве только 12 элементов.
