@@ -1,6 +1,6 @@
 import numpy as np
 def make_hours() -> list[int]:
-    arr = np.arrange(0, 22, 3)
+    arr = np.arange(0, 22, 3)
     return arr.tolist()
 
 
